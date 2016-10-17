@@ -1,9 +1,9 @@
-$cellHeight: 20px;
-$cellWidth: 20px;
+$cellHeight: 40px;
+$cellWidth: 40px;
 $gutterWidth: 90px;
 $headerHeight: 30px;
-$numCells: 14;
-$numColors: 19;
+$numCells: 9;
+$numColors: 3;
 $containerWidth: ($cellWidth * $numCells) + $gutterWidth;
 $containerHeight: ($numColors * $cellHeight) + $headerHeight;
 @mixin flex-center() {
@@ -17,9 +17,9 @@ $containerHeight: ($numColors * $cellHeight) + $headerHeight;
 }
 html,
 body {
-  font-family: 'BlinkMacSystemFont', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Brandon Text', sans-serif;
   color: #fff;
-  font-size: 13px;
+  font-size: 16px;
   margin: 0;
   width: $containerWidth;
   max-width: $containerWidth;
@@ -38,7 +38,7 @@ body {
   width: $containerWidth;
   height: $containerHeight - $headerHeight;
   z-index: 2;
-  font-size: 2em;
+  //font-size: 1.4em;
   background-color: rgba(0,0,0,0.7);
   transition: all 1s;
 }
@@ -60,7 +60,7 @@ body {
   flex-direction: column;
   position: fixed;
   min-width: 150px;
-  height: 40px;
+  height: 45px;
   top: 0;
   left: 0;
   padding: 10px;
@@ -78,7 +78,7 @@ body {
   align-items: center;
   background-color: #455A64;
   height: $headerHeight;
-  font-size: 14px;
+  font-size: 16px;
   padding: 2px;
 }
 .cell {
@@ -95,7 +95,9 @@ body {
 }
 .gutter.cell {
   width: $gutterWidth;
-  text-align: center;
+  text-align: right;
+  line-height: $cellHeight;
+  padding-right: 4px;
 }
 .color {
   cursor: pointer;

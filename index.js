@@ -1,7 +1,7 @@
 const electron = require('electron');
 const menubar = require('menubar')({
-  width: 370,
-  height: 410,
+  width: 9*40+90,
+  height: 3*40+30,
   icon: __dirname + '/assets/IconTemplate.png',
   dir: __dirname,
   alwaysOnTop: true,

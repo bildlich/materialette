@@ -3,13 +3,13 @@
 
 html,
 body {
-  font-family: 'BlinkMacSystemFont', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Brandon Text', sans-serif;
   color: #fff;
-  font-size: 13px;
+  font-size: 16px;
   margin: 0;
-  width: 370px;
-  max-width: 370px;
-  height: 410px;
+  width: 450px;
+  max-width: 450px;
+  height: 150px;
   overflow: hidden; }
 
 #container {
@@ -28,10 +28,9 @@ body {
   position: fixed;
   -ms-flex-direction: column;
       flex-direction: column;
-  width: 370px;
-  height: 380px;
+  width: 450px;
+  height: 120px;
   z-index: 2;
-  font-size: 2em;
   background-color: rgba(0, 0, 0, 0.7);
   transition: all 1s; }
 
@@ -68,7 +67,7 @@ body {
       flex-direction: column;
   position: fixed;
   min-width: 150px;
-  height: 40px;
+  height: 45px;
   top: 0;
   left: 0;
   padding: 10px;
@@ -77,7 +76,7 @@ body {
 #clipboard {
   position: fixed;
   z-index: -1;
-  top: -370px; }
+  top: -450px; }
 
 #controls {
   display: -ms-flexbox;
@@ -90,12 +89,12 @@ body {
       align-items: center;
   background-color: #455A64;
   height: 30px;
-  font-size: 14px;
+  font-size: 16px;
   padding: 2px; }
 
 .cell {
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   border: 1px solid rgba(0, 0, 0, 0.25); }
 
 .cell:hover {
@@ -108,7 +107,9 @@ body {
 
 .gutter.cell {
   width: 90px;
-  text-align: center; }
+  text-align: right;
+  line-height: 40px;
+  padding-right: 4px; }
 
 .color {
   cursor: pointer; }
