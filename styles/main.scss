@@ -87,6 +87,16 @@ body {
     margin-right: 15px;
   }
 }
+#pinned-container {
+  input {
+    display: none;
+  }
+  &:not(.checked) {
+    .icon {
+      visibility: hidden;
+    }
+  }
+}
 .cell {
   width: $cellHeight;
   height: $cellWidth;

@@ -160,6 +160,8 @@ function hideApp() {
 }
 function togglePinned() {
   State.sharedObj.pinned = State.pinnedEle.checked;
+  // Give the container a class if checkbox is checked
+  document.getElementById('pinned-container').classList.toggle('checked', State.pinnedEle.checked);
 }
 
 /** Utilities **/

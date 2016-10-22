@@ -11,7 +11,11 @@
   <div id="container">
     <section id="controls">
       <div class="clickable" id="current-output" onclick="changeOutput()">HEX</div>
-      <label class="clickable"><input id="pinned" type="checkbox" onChange="togglePinned()"/> Pinned</label>
+      <label class="clickable" id="pinned-container">
+        <input id="pinned" type="checkbox" onChange="togglePinned()"/>
+        <span class="icon">✔︎</span>
+        Pinned
+      </label>
       <div id="hide" class="clickable" onclick="hideApp()">Hide</div>
       <div id="close" class="clickable" onclick="closeApp()">Quit</div>
     </section>
