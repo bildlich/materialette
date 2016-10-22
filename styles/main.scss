@@ -97,6 +97,16 @@ body {
     }
   }
 }
+#pinned-container {
+  input {
+    display: none;
+  }
+  &:not(.checked) {
+    .icon {
+      visibility: hidden;
+    }
+  }
+}
 .cell {
   width: $cellHeight;
   height: $cellWidth;
