@@ -5,9 +5,9 @@ A little menu bar helper to easily access the mySugr brand and UI colors. ms-col
 ## Install
 
 ### macOS
-1. Download the latest build from the [releases](https://github.com/bildlich/materialette/releases) section. Make sure to choose your operating system appropriately.
-2. Unzip the Materialette.zip.
-3. Move the Materialette.app file to the `/Applications` directory
+1. Download the latest build from the [releases](https://github.com/bildlich/materialette/releases) section.
+2. Unzip the file.
+3. Move the ms-colors.app file to the `/Applications` directory
 
 ## Develop
 * Install dependencies: `$ npm install`
