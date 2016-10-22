@@ -79,7 +79,7 @@ document.body.addEventListener('mousemove', e => {
   } else if (e.target.parentNode.className.indexOf('color') > -1) {
     node = e.target.parentNode;
   } else {
-    tooltip.className = "hidden";
+    hideTooltip();
     State.currentColor = null;
     return;
   }
@@ -142,6 +142,10 @@ document.body.addEventListener('click', e => {
   }
 });
 
+document.body.addEventListener('mouseleave', e => {
+  hideTooltip();
+});
+
 /**
  * Toggle between HEX or RGB for the tooltip + copy
  */
@@ -152,7 +156,9 @@ function changeOutput() {
   }
   document.getElementById('current-output').innerHTML = State.output[State.index];
 }
-
+function hideTooltip() {
+  State.tooltipEle.className = "hidden";
+}
 function closeApp() {
   State.sharedObj.quit()
 }
