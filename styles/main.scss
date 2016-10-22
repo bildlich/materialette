@@ -1,11 +1,14 @@
 $cellHeight: 40px;
 $cellWidth: 40px;
-$gutterWidth: 90px;
-$headerHeight: 30px;
+$gutterWidth: 100px;
+$headerHeight: 40px;
 $numCells: 9;
 $numColors: 3;
 $containerWidth: ($cellWidth * $numCells) + $gutterWidth;
 $containerHeight: ($numColors * $cellHeight) + $headerHeight;
+$color-dark: #333333;
+$color-text-light: #999999;
+$color-link-hover: #8EB927;
 @mixin flex-center() {
   display: flex;
   justify-content: center;
@@ -18,13 +21,14 @@ $containerHeight: ($numColors * $cellHeight) + $headerHeight;
 html,
 body {
   font-family: 'Brandon Text', sans-serif;
-  color: #fff;
+  color: $color-text-light;
   font-size: 16px;
   margin: 0;
   width: $containerWidth;
   max-width: $containerWidth;
   height: $containerHeight;
   overflow: hidden;
+  background-color: $color-dark;
 }
 #container {
   height: 100%;
@@ -39,8 +43,8 @@ body {
   height: $containerHeight - $headerHeight;
   z-index: 2;
   //font-size: 1.4em;
-  background-color: rgba(0,0,0,0.7);
-  transition: all 1s;
+  background-color: rgba(0,0,0,0.85);
+  transition: all 500ms;
 }
 #key {
   display: flex;
@@ -76,7 +80,7 @@ body {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  background-color: #455A64;
+  background-color: $color-dark;
   height: $headerHeight;
   font-size: 16px;
   padding: 2px;
@@ -85,6 +89,7 @@ body {
   width: $cellHeight;
   height: $cellWidth;
   border: 1px solid rgba(0, 0, 0, 0.25);
+  border: 0;
 }
 .cell:hover {
   border: 1px solid #000;
@@ -97,7 +102,8 @@ body {
   width: $gutterWidth;
   text-align: right;
   line-height: $cellHeight;
-  padding-right: 4px;
+  padding-right: 8px;
+  border: 0;
 }
 .color {
   cursor: pointer;
@@ -109,26 +115,26 @@ body {
   -webkit-user-select: none;
 }
 .arrow.left {
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 10px solid white;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid $color-text-light;
 }
 .arrow.right {
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-right: 10px solid white;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-right: 7px solid $color-text-light;
 }
 .arrow.left:hover {
-  border-left: 10px solid #00e5ff;
+  border-left: 7px solid $color-link-hover;
 }
 .arrow.right:hover {
-  border-right: 10px solid #00e5ff;
+  border-right: 7px solid $color-link-hover;
 }
 .clickable {
   cursor: pointer;
 }
 .clickable:hover {
-  color: #00e5ff;
+  color: $color-link-hover;
 }
 .hidden {
   opacity: 0;

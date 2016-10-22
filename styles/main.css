@@ -4,13 +4,14 @@
 html,
 body {
   font-family: 'Brandon Text', sans-serif;
-  color: #fff;
+  color: #999999;
   font-size: 16px;
   margin: 0;
-  width: 450px;
-  max-width: 450px;
-  height: 150px;
-  overflow: hidden; }
+  width: 460px;
+  max-width: 460px;
+  height: 160px;
+  overflow: hidden;
+  background-color: #333333; }
 
 #container {
   height: 100%;
@@ -28,11 +29,11 @@ body {
   position: fixed;
   -ms-flex-direction: column;
       flex-direction: column;
-  width: 450px;
+  width: 460px;
   height: 120px;
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.7);
-  transition: all 1s; }
+  background-color: rgba(0, 0, 0, 0.85);
+  transition: all 500ms; }
 
 #key {
   display: -ms-flexbox;
@@ -76,7 +77,7 @@ body {
 #clipboard {
   position: fixed;
   z-index: -1;
-  top: -450px; }
+  top: -460px; }
 
 #controls {
   display: -ms-flexbox;
@@ -87,15 +88,16 @@ body {
       justify-content: space-around;
   -ms-flex-align: center;
       align-items: center;
-  background-color: #455A64;
-  height: 30px;
+  background-color: #333333;
+  height: 40px;
   font-size: 16px;
   padding: 2px; }
 
 .cell {
   width: 40px;
   height: 40px;
-  border: 1px solid rgba(0, 0, 0, 0.25); }
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border: 0; }
 
 .cell:hover {
   border: 1px solid #000; }
@@ -106,10 +108,11 @@ body {
   width: 100%; }
 
 .gutter.cell {
-  width: 90px;
+  width: 100px;
   text-align: right;
   line-height: 40px;
-  padding-right: 4px; }
+  padding-right: 8px;
+  border: 0; }
 
 .color {
   cursor: pointer; }
@@ -121,26 +124,26 @@ body {
   -webkit-user-select: none; }
 
 .arrow.left {
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 10px solid white; }
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid #999999; }
 
 .arrow.right {
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-right: 10px solid white; }
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-right: 7px solid #999999; }
 
 .arrow.left:hover {
-  border-left: 10px solid #00e5ff; }
+  border-left: 7px solid #8EB927; }
 
 .arrow.right:hover {
-  border-right: 10px solid #00e5ff; }
+  border-right: 7px solid #8EB927; }
 
 .clickable {
   cursor: pointer; }
 
 .clickable:hover {
-  color: #00e5ff; }
+  color: #8EB927; }
 
 .hidden {
   opacity: 0;

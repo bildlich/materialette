@@ -4,6 +4,7 @@
 <head>
   <title>Materialette</title>
   <link rel="stylesheet" href="styles/main.css">
+  <meta charset="utf-8">
 </head>
 
 <body>
@@ -12,9 +13,9 @@
       <div class="arrow right" onclick="changeOutput()"></div>
       <div id="current-output">HEX</div>
       <div class="arrow left" onclick="changeOutput()"></div>
-      <label class="clickable"><input id="pinned" type="checkbox" onChange="togglePinned()"/> pinned</label>
-      <div id="hide" class="clickable" onclick="hideApp()">hide</div>
-      <div id="close" class="clickable" onclick="closeApp()">exit</div>
+      <label class="clickable"><input id="pinned" type="checkbox" onChange="togglePinned()"/> Pinned</label>
+      <div id="hide" class="clickable" onclick="hideApp()">Hide</div>
+      <div id="close" class="clickable" onclick="closeApp()">Exit</div>
     </section>
 
 
@@ -24,7 +25,7 @@
     <textarea id="clipboard"></textarea>
     <div id="curtain" class="hidden">
       <div id="color-copied">#FFFFFF</div>
-      <br> Copied to the clipboard</div>
+      <br> 👍 Copied to the clipboard</div>
   </div>
 
   <script src="scripts/main.js"></script>

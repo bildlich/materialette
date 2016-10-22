@@ -1,4 +1,4 @@
-const CONTAINER_WIDTH = 370;
+const CONTAINER_WIDTH = 460;
 const TOOLTIP_WIDTH = 140;
 const TOOLTIP_HEIGHT = 40;
 const State = {
@@ -60,14 +60,13 @@ function createCell(series, color, isGutter, name) {
   if (isGutter) {
     cell.innerHTML = `<span>${name}</span>`;
     cell.className += ' gutter';
-    cell.style.backgroundColor = '#000';
   }
   else {
     cell.style.backgroundColor = color;
     cell.classList.add('color');
+    cell.setAttribute('data-series', series);
+    cell.style.color = luminance(color, '#fff', '#444');
   }
-  cell.setAttribute('data-series', series);
-  cell.style.color = luminance(color, '#fff', '#444');
   return cell;
 }
 
@@ -135,7 +134,7 @@ document.body.addEventListener('click', e => {
       curtain.className = "";
       setTimeout(function() {
         curtain.className = "hidden";
-      }, 1000);
+      }, 1400);
     } catch (err) {
       console.log(err);
     }

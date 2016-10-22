@@ -1,7 +1,7 @@
 const electron = require('electron');
 const menubar = require('menubar')({
-  width: 9*40+90,
-  height: 3*40+30,
+  width: 9*40+100,
+  height: 3*40+40,
   icon: __dirname + '/assets/IconTemplate.png',
   dir: __dirname,
   alwaysOnTop: true,
@@ -40,8 +40,8 @@ menubar.on('ready', ()=>{
     quit: menubar.app.quit,
     pinned: false
   }
-  
-  // This will add a context menu on the 
+
+  // This will add a context menu on the
   // app icon on right click for Windows
   if (process.platform == 'win32') {
     menubar.tray.setContextMenu(contextMenu);
