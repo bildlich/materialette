@@ -103,6 +103,7 @@ document.body.addEventListener('mousemove', e => {
 
   tooltip.style.color = luminance(hex, '#fff', '#000');
   State.currentColor = value;
+  State.currentColorName = series;
 
   // Adjust bounds of tooltip to avoid edge bleeding
   let offsetX = e.clientX - TOOLTIP_WIDTH / 2;
@@ -129,7 +130,7 @@ document.body.addEventListener('click', e => {
     clipboard.select();
     try {
       var successful = document.execCommand('copy');
-      document.getElementById('color-copied').innerHTML = output;
+      document.getElementById('color-copied').innerHTML = State.currentColorName + " / " + output;
       const curtain = document.getElementById('curtain');
       curtain.className = "";
       setTimeout(function() {
