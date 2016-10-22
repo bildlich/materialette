@@ -10,38 +10,32 @@ const State = {
   sharedObj: (require('electron').remote).getGlobal('sharedObj')
 };
 const colors = {
-  "primary": [
+  "Primary": [
     ["ms-green", "#8EB927"],
-    ["100", "#FFCDD2"],
-    ["200", "#EF9A9A"],
-    ["300", "#E57373"],
-    ["400", "#EF5350"],
-    ["500", "#F44336"],
-    ["600", "#E53935"],
-    ["700", "#D32F2F"],
-    ["800", "#C62828"]
+    ["ms-red", "#E75D32"],
+    ["ms-gold", "#F0AC00"],
+    ["ms-midnight", "#343434"],
+    ["ms-twilight", "#737373"],
+    ["ms-noon", "#A3A3A3"],
+    ["ms-dim", "#C4C2C2"],
+    ["ms-daytime", "#E6E6E6"],
+    ["ms-neutral", "#FAFAFA"]
   ],
-  "secondary": [
-    ["50", "#FCE4EC"],
-    ["100", "#F8BBD0"],
-    ["200", "#F48FB1"],
-    ["300", "#F06292"],
-    ["400", "#EC407A"],
-    ["500", "#E91E63"],
-    ["600", "#D81B60"],
-    ["700", "#C2185B"],
-    ["800", "#AD1457"]
+  "Secondary": [
+    ["ms-orange", "#FF8819"],
+    ["ms-choco", "#774212"],
+    ["ms-violet", "#834A84"],
+    ["ms-petrol", "#479D95"],
+    ["ms-pink", "#E43F9F"],
+    ["ms-sky", "#8FCAE4"],
+    ["ms-tree", "#72951F"],
+    ["ms-disco", "#E4F50A"],
+    ["ms-ice", "#00BCDE"]
   ],
-  "tertiary": [
-    ["50", "#F3E5F5"],
-    ["100", "#E1BEE7"],
-    ["200", "#CE93D8"],
-    ["300", "#BA68C8"],
-    ["400", "#AB47BC"],
-    ["500", "#9C27B0"],
-    ["600", "#8E24AA"],
-    ["700", "#7B1FA2"],
-    ["800", "#6A1B9A"]
+  "Tertiary": [
+    ["ms-blood", "#BC171B"],
+    ["ms-water", "#0B8BD7"],
+    ["ms-yellow", "#FFCC00"]
   ]
 };
 
@@ -54,11 +48,9 @@ for (let name in colors) {
     //Append the color cell
     const cell = createCell(val[0], val[1]);
     row.appendChild(cell);
-    //Create the gutter cell from the 500 series
-    if (val[0] === '500') {
-      row.insertBefore(createCell(val[0], val[1], true, name), row.childNodes[0]);
-    }
   })
+  //Create the gutter cell from the 500 series
+  row.insertBefore(createCell("test", "test2", true, name), row.childNodes[0]);
   container.appendChild(row);
 }
 
