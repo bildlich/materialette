@@ -1,4 +1,3 @@
-const CONTAINER_WIDTH = 460;
 const TOOLTIP_WIDTH = 140;
 const TOOLTIP_HEIGHT = 40;
 const State = {
@@ -110,7 +109,7 @@ document.body.addEventListener('mousemove', e => {
   let offsetY = e.clientY - TOOLTIP_HEIGHT - 10;
   if (offsetX < 0) {
     offsetX = e.clientX + 30;
-  } else if (offsetX > CONTAINER_WIDTH - TOOLTIP_WIDTH) {
+  } else if (offsetX > document.getElementById('container').offsetWidth - TOOLTIP_WIDTH) {
     offsetX -= 65;
   }
   if (offsetY < 0) {
@@ -133,6 +132,7 @@ document.body.addEventListener('click', e => {
       document.getElementById('color-copied').innerHTML = State.currentColorName + " / " + output;
       const curtain = document.getElementById('curtain');
       curtain.className = "";
+      hideTooltip();
       setTimeout(function() {
         curtain.className = "hidden";
       }, 1400);
