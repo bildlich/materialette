@@ -43,7 +43,6 @@ body {
   width: $containerWidth;
   height: $containerHeight - $headerHeight;
   z-index: 2;
-  //font-size: 1.4em;
   background-color: rgba(0,0,0,0.85);
   transition: all 500ms;
 }
@@ -77,14 +76,16 @@ body {
   top: -$containerWidth;
 }
 #controls {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
   background-color: $color-dark;
   height: $headerHeight;
   font-size: 16px;
-  padding: 2px;
+  text-align: right;
+
+  & > * {
+    line-height: 40px;
+    display: inline-block;
+    margin-right: 15px;
+  }
 }
 .cell {
   width: $cellHeight;

@@ -81,18 +81,14 @@ body {
   top: -460px; }
 
 #controls {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-align: center;
-      align-items: center;
   background-color: #333333;
   height: 40px;
   font-size: 16px;
-  padding: 2px; }
+  text-align: right; }
+  #controls > * {
+    line-height: 40px;
+    display: inline-block;
+    margin-right: 15px; }
 
 .cell {
   width: 40px;
