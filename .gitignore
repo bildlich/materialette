@@ -3,3 +3,4 @@ node_modules/
 ._*
 dist/
 /styles/main.css
+/npm-debug.log
