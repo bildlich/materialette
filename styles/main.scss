@@ -110,27 +110,6 @@ body {
 .color {
   cursor: pointer;
 }
-.arrow {
-  width: 0;
-  height: 0;
-  cursor: pointer;
-}
-.arrow.left {
-  border-top: 7px solid transparent;
-  border-bottom: 7px solid transparent;
-  border-left: 7px solid $color-text-light;
-}
-.arrow.right {
-  border-top: 7px solid transparent;
-  border-bottom: 7px solid transparent;
-  border-right: 7px solid $color-text-light;
-}
-.arrow.left:hover {
-  border-left: 7px solid $color-link-hover;
-}
-.arrow.right:hover {
-  border-right: 7px solid $color-link-hover;
-}
 .clickable {
   cursor: pointer;
 }
