@@ -10,9 +10,7 @@
 <body>
   <div id="container">
     <section id="controls">
-      <div class="arrow right" onclick="changeOutput()"></div>
-      <div id="current-output">HEX</div>
-      <div class="arrow left" onclick="changeOutput()"></div>
+      <div id="current-output" onclick="changeOutput()">HEX</div>
       <label class="clickable"><input id="pinned" type="checkbox" onChange="togglePinned()"/> Pinned</label>
       <div id="hide" class="clickable" onclick="hideApp()">Hide</div>
       <div id="close" class="clickable" onclick="closeApp()">Exit</div>

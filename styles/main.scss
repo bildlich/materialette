@@ -17,6 +17,7 @@ $color-link-hover: #8EB927;
 }
 * {
   box-sizing: border-box;
+  -webkit-user-select: none;
 }
 html,
 body {
@@ -112,7 +113,6 @@ body {
   width: 0;
   height: 0;
   cursor: pointer;
-  -webkit-user-select: none;
 }
 .arrow.left {
   border-top: 7px solid transparent;

@@ -1,5 +1,6 @@
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  -webkit-user-select: none; }
 
 html,
 body {
@@ -116,28 +117,6 @@ body {
 
 .color {
   cursor: pointer; }
-
-.arrow {
-  width: 0;
-  height: 0;
-  cursor: pointer;
-  -webkit-user-select: none; }
-
-.arrow.left {
-  border-top: 7px solid transparent;
-  border-bottom: 7px solid transparent;
-  border-left: 7px solid #999999; }
-
-.arrow.right {
-  border-top: 7px solid transparent;
-  border-bottom: 7px solid transparent;
-  border-right: 7px solid #999999; }
-
-.arrow.left:hover {
-  border-left: 7px solid #8EB927; }
-
-.arrow.right:hover {
-  border-right: 7px solid #8EB927; }
 
 .clickable {
   cursor: pointer; }
