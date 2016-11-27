@@ -47,6 +47,16 @@ body {
   background-color: rgba(0,0,0,0.85);
   transition: all 200ms;
 }
+#curtain-clipboard-analysis {
+  @include flex-center();
+  position: fixed;
+  flex-direction: column;
+  width: $containerWidth;
+  height: $containerHeight - $headerHeight;
+  z-index: 2;
+  background-color: rgba(0,0,0,0.85);
+  transition: all 200ms;
+}
 #key {
   display: flex;
   position: absolute;
