@@ -17,6 +17,6 @@ A little menu bar helper to easily access the mySugr brand and UI colors. ms-col
 
 ## How to use
 
-Click on the icon in the menu bar and then on a color to copy its color value to the clipboard.
+Click on the icon in the menu bar and then on a color to copy its value to the clipboard.
 
 Paste a color code with CMD+V while the ms-colors window is open and it will tell you the name of the color.
