@@ -11,30 +11,23 @@ const State = {
 const colors = {
   "Primary": [
     ["ms-green", "#8EB927"],
+  ],
+  "Secondary": [
     ["ms-red", "#E75D32"],
     ["ms-gold", "#F0AC00"],
+    ["ms-orange", "#FF8819"],
+    ["ms-petrol", "#479D95"],
+    ["ms-purple", "#A53257"],
+    ["ms-mustard", "#D6B555"],
+    ["ms-tree", "#72951F"]
+  ],
+  "Grey": [
     ["ms-midnight", "#343434"],
     ["ms-twilight", "#737373"],
     ["ms-noon", "#A3A3A3"],
     ["ms-dim", "#C4C2C2"],
     ["ms-daytime", "#E6E6E6"],
     ["ms-neutral", "#FAFAFA"]
-  ],
-  "Secondary": [
-    ["ms-orange", "#FF8819"],
-    ["ms-choco", "#774212"],
-    ["ms-violet", "#834A84"],
-    ["ms-petrol", "#479D95"],
-    ["ms-pink", "#E43F9F"],
-    ["ms-sky", "#8FCAE4"],
-    ["ms-tree", "#72951F"],
-    ["ms-disco", "#E4F50A"],
-    ["ms-ice", "#00BCDE"]
-  ],
-  "Tertiary": [
-    ["ms-blood", "#BC171B"],
-    ["ms-water", "#0B8BD7"],
-    ["ms-yellow", "#FFCC00"]
   ]
 };
 
@@ -280,7 +273,7 @@ function showCurtainAnalysisNoColor() {
   curtain.className = "";
   setTimeout(function() {
     curtain.className = "hidden";
-  }, 1400); 
+  }, 1400);
 }
 
 document.getElementById('clipboard').addEventListener('paste', handlePaste);
