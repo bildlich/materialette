@@ -5,7 +5,7 @@ const menubar = require('menubar')({
   icon: __dirname + '/assets/IconTemplate.png',
   dir: __dirname,
   alwaysOnTop: true,
-  tooltip: "Materialette",
+  tooltip: "ms-colors",
   resizable: false
 });
 
@@ -13,7 +13,7 @@ const contextMenu = electron.Menu.buildFromTemplate([
   {
     label: 'About',
     click() {
-      electron.dialog.showMessageBox({title: "Materialette", type:"info", message: "Material Color Palette for macOS, Windows, and Linux", buttons: ["Close"] });
+      electron.dialog.showMessageBox({title: "ms-colors", type:"info", message: "mySugr color palette for macOS", buttons: ["Close"] });
     }
   },
   {
