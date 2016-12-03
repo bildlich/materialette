@@ -9,8 +9,14 @@ const State = {
   sharedObj: (require('electron').remote).getGlobal('sharedObj')
 };
 const colors = {
-  "Primary": [
+  "Prim.&nbsp;&&nbsp;Grey": [
     ["ms-green", "#8EB927"],
+    ["ms-midnight", "#343434"],
+    ["ms-twilight", "#737373"],
+    ["ms-noon", "#A3A3A3"],
+    ["ms-dim", "#C4C2C2"],
+    ["ms-daytime", "#E6E6E6"],
+    ["ms-neutral", "#FAFAFA"]
   ],
   "Secondary": [
     ["ms-red", "#E75D32"],
@@ -20,14 +26,6 @@ const colors = {
     ["ms-purple", "#A53257"],
     ["ms-mustard", "#D6B555"],
     ["ms-tree", "#72951F"]
-  ],
-  "Grey": [
-    ["ms-midnight", "#343434"],
-    ["ms-twilight", "#737373"],
-    ["ms-noon", "#A3A3A3"],
-    ["ms-dim", "#C4C2C2"],
-    ["ms-daytime", "#E6E6E6"],
-    ["ms-neutral", "#FAFAFA"]
   ]
 };
 
@@ -248,7 +246,7 @@ function handlePaste (e) {
 function showCurtainAnalysisSuccess(colorName, colorHex) {
   var curtain = document.getElementById('curtain-clipboard-analysis');
   curtain.innerHTML = "<div class='col-intro'>" + colorHex + "</div>\
-    <div class='cell' style='background-color: " + colorHex + "'></div>\
+    <div class='cell cell--curtain' style='background-color: " + colorHex + "'></div>\
     <div class='col-outro'>👍 " + colorName + "</div>";
   curtain.className = "";
   setTimeout(function() {

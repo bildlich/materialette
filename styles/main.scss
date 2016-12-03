@@ -1,13 +1,13 @@
 $cellHeight: 36px;
 $cellWidth: 36px;
 $cellGap: 6px;
-$gutterWidth: 94px;
+$gutterWidth: 110px;
 $headerHeight: 36px;
-$numCells: 9;
-$numColors: 3;
+$numCells: 7;
+$numColors: 2;
 $containerWidth: $numCells * ($cellWidth + $cellGap) + $gutterWidth;
 $containerHeight: $numColors * ($cellHeight + $cellGap) + $headerHeight;
-$color-dark: #333333;
+$color-dark: #182104;
 $color-text-light: #999999;
 $color-link-hover: #8EB927;
 @mixin flex-center() {
@@ -37,32 +37,27 @@ body {
   width: 100%;
   position: relative;
 }
-#curtain {
+#curtain, #curtain-clipboard-analysis {
   @include flex-center();
   position: fixed;
+  left: 0;
+  top: 0;
   flex-direction: column;
   width: $containerWidth;
-  height: $containerHeight - $headerHeight;
+  height: 100%;
   z-index: 2;
   background-color: rgba(0,0,0,0.85);
   transition: all 200ms;
 }
-#curtain-clipboard-analysis {
-  @include flex-center();
-  position: fixed;
-  flex-direction: column;
-  width: $containerWidth;
-  height: $containerHeight - $headerHeight;
-  z-index: 2;
-  background-color: rgba(0,0,0,0.85);
-  transition: all 200ms;
+.col-intro {
+  margin-bottom: 4px;
 }
 #key {
   display: flex;
   position: absolute;
   flex-direction: column;
   height: 60px;
-  width: 80px;
+  width: 90px;
   right: 0;
   bottom: 0;
 }
@@ -126,6 +121,9 @@ body {
   border: 0;
   border-radius: 50%;
   margin: 0 $cellGap $cellGap 0;
+}
+.cell--curtain {
+  margin: 0 0 0 0;
 }
 .row {
   display: flex;
