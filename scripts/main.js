@@ -252,7 +252,7 @@ function showCurtainAnalysisFailure(colorHex) {
   var curtain = document.getElementById('curtain-clipboard-analysis');
   curtain.innerHTML = "<div class='col-intro'>" + colorHex + "</div>\
     <div class='cell' style='background-color: " + colorHex + "'></div>\
-    <div class='col-outro'>🚫 " + colorHex + " ist nicht in der Sammlung</div>";
+    <div class='col-outro'>🚫 " + colorHex + " is not in the collection</div>";
     curtain.className = "";
     setTimeout(function() {
       curtain.className = "hidden";
@@ -261,7 +261,7 @@ function showCurtainAnalysisFailure(colorHex) {
 
 function showCurtainAnalysisNoColor() {
   var curtain = document.getElementById('curtain-clipboard-analysis');
-  curtain.innerHTML = "<div class='col-intro'>Sorry, das ist kein Farbwert.</div>";
+  curtain.innerHTML = "<div class='col-intro'>Sorry, that's not a color</div>";
   curtain.className = "";
   setTimeout(function() {
     curtain.className = "hidden";
