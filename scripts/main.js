@@ -8,6 +8,10 @@ const State = {
   pinnedEle: document.getElementById('pinned'),
   sharedObj: (require('electron').remote).getGlobal('sharedObj')
 };
+
+const {clipboard} = require('electron').remote;
+const key = require('keymaster');
+
 const colors = {
   "Prim.&nbsp;&&nbsp;Grey": [
     ["ms-green", "#8EB927"],
@@ -28,9 +32,6 @@ const colors = {
     ["ms-tree", "#72951F"]
   ]
 };
-
-// Focus invisible textarea so we can listen for paste event
-focusClipboard();
 
 // Populate color cells
 const container = document.getElementById('container');
@@ -117,10 +118,10 @@ document.body.addEventListener('mousemove', e => {
 // Copy the user's selected color to the clipboard
 document.body.addEventListener('click', e => {
   if (State.currentColor !== null) {
-    const clipboard = document.getElementById('clipboard');
+    const clipboardTextarea = document.getElementById('clipboard-textarea');
     let output;
-    clipboard.innerHTML = output = State.currentColor;
-    clipboard.select();
+    clipboardTextarea.innerHTML = output = State.currentColor;
+    clipboardTextarea.select();
     try {
       var successful = document.execCommand('copy');
       document.getElementById('color-copied').innerHTML = State.currentColorName + " / " + output;
@@ -133,9 +134,9 @@ document.body.addEventListener('click', e => {
     } catch (err) {
       console.log(err);
     }
+    // Unfocus the textarea, otherwise we can't listen for CMD+V
+    clipboardTextarea.blur();
   }
-  // Focus invisible textarea so we can listen for paste event
-  focusClipboard();
 });
 
 document.body.addEventListener('mouseleave', e => {
@@ -187,17 +188,10 @@ function luminance(sHexColor, sLight, sDark) {
   return (yiq >= 128) ? sDark : sLight;
 }
 
-function handlePaste (e) {
-    var clipboardData, pastedData, hexColorToInterpret;
+function handlePaste (pastedData) {
+    console.log('handlePaste', pastedData);
+    var hexColorToInterpret;
     var colorFound = false;
-
-    // Stop data actually being pasted into div
-    e.stopPropagation();
-    e.preventDefault();
-
-    // Get pasted data via clipboard API
-    clipboardData = e.clipboardData || window.clipboardData;
-    pastedData = clipboardData.getData('Text');
 
     // Is it a hex value pasted from Sketch, Photoshop or similar? (RRGGBB, #RRGGBB)
     if (hexToRgb(pastedData)) {
@@ -262,7 +256,7 @@ function showCurtainAnalysisFailure(colorHex) {
     curtain.className = "";
     setTimeout(function() {
       curtain.className = "hidden";
-    }, 1400);
+    }, 1000);
 }
 
 function showCurtainAnalysisNoColor() {
@@ -271,12 +265,8 @@ function showCurtainAnalysisNoColor() {
   curtain.className = "";
   setTimeout(function() {
     curtain.className = "hidden";
-  }, 1400);
+  }, 1200);
 }
 
-document.getElementById('clipboard').addEventListener('paste', handlePaste);
-
-function focusClipboard() {
-  document.getElementById("clipboard").focus();
-  console.log('Clipboard has focus');
-}
+// Listen to CMD+V shortcut. Uses keymaster library
+key('command+v', function(){ handlePaste(clipboard.readText()) });

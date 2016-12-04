@@ -1,7 +1,7 @@
 {
   "name": "ms-colors",
   "productName": "ms-colors",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "mySugr color palette",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,7 @@
   "url": "https://github.com/mike-schultz",
   "license": "MIT",
   "dependencies": {
+    "keymaster": "^1.6.2",
     "menubar": "^5.1.0"
   },
   "devDependencies": {
