@@ -20,4 +20,4 @@ A little menu bar helper to easily access the mySugr brand and UI colors. ms-col
 
 Click on the icon in the menu bar and then on a color to copy its value to the clipboard.
 
-Paste a color code with CMD+V while the ms-colors window is open and it will tell you the name of the color. This works with hex codes (#8eb927) as well as tab-separated RGB codes (135 175 36). The latter is handy when you use macOS's Digital Color Meter.
+Paste a color code with CMD+V while the ms-colors window is open and it will tell you the name of the color. This works with hex codes (#8eb927) as well as tab-separated RGB codes (135 175 36). The latter is handy when you use macOS's [Digital Color Meter](https://en.wikipedia.org/wiki/DigitalColor_Meter).
