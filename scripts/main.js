@@ -20,7 +20,8 @@ const colors = {
     ["ms-noon", "#A3A3A3"],
     ["ms-dim", "#C4C2C2"],
     ["ms-daytime", "#E6E6E6"],
-    ["ms-neutral", "#FAFAFA"]
+    ["ms-neutral", "#F2F2F2"],
+    ["ms-snow", "#FFFFFF"]
   ],
   "Secondary": [
     ["ms-red", "#E75D32"],
@@ -29,7 +30,8 @@ const colors = {
     ["ms-petrol", "#479D95"],
     ["ms-purple", "#A53257"],
     ["ms-mustard", "#D6B555"],
-    ["ms-tree", "#72951F"]
+    ["ms-tree", "#72951F"],
+    ["ms-blue", "#66D4D9"]
   ]
 };
 
