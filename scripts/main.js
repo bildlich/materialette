@@ -29,7 +29,7 @@ const colors = {
     ["ms-orange", "#FF8819"],
     ["ms-petrol", "#479D95"],
     ["ms-purple", "#A53257"],
-    ["ms-mustard", "#D6B555"],
+    ["ms-brown", "#9E6C3B"],
     ["ms-tree", "#72951F"],
     ["ms-blue", "#66D4D9"]
   ]
