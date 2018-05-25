@@ -20,7 +20,8 @@ const colors = {
     ["ms-noon", "#A3A3A3"],
     ["ms-dim", "#C4C2C2"],
     ["ms-daytime", "#E6E6E6"],
-    ["ms-neutral", "#F2F2F2"],
+    ["ms-shady", "#F2F2F2"],
+    ["ms-neutral", "#FAFAFA"],
     ["ms-snow", "#FFFFFF"]
   ],
   "Secondary": [

@@ -3,7 +3,7 @@ $cellWidth: 36px;
 $cellGap: 6px;
 $gutterWidth: 110px;
 $headerHeight: 36px;
-$numCells: 8;
+$numCells: 9;
 $numColors: 2;
 $containerWidth: $numCells * ($cellWidth + $cellGap) + $gutterWidth;
 $containerHeight: $numColors * ($cellHeight + $cellGap) + $headerHeight;
